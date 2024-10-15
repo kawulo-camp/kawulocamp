@@ -1,0 +1,246 @@
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+:root {
+  --primary: #277019;
+  --secondary: #101010;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  animation: 0.5s transitionIn;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary);
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar img {
+  margin-bottom: 0.5rem;
+  width: 250px;
+  object-fit: cover;
+}
+
+.navbar .navbar-nav a {
+  color: #ffff;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-extra a {
+  color: #ffff;
+  margin: 0 0.5rem;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.hero .content-contact {
+  padding: 1.4rem 7%;
+  color: var(--bg);
+}
+
+.hero .content-contact h1 {
+  font-size: 3em;
+  margin-bottom: 1rem;
+}
+
+.content-contact .sosmed {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.content-contact .sosmed .instagram {
+  margin: 2rem;
+  border-radius: 55px;
+  height: 199.5px;
+  transition: 0.5s ease-in-out;
+}
+
+.content-contact .sosmed .instagram:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 16px 4px rgba(255, 24, 24, 1);
+}
+
+.content-contact .sosmed .whatsapp {
+  margin: 2rem;
+  border-radius: 32px;
+  height: 201px;
+  transition: 0.5s ease-in-out;
+}
+
+.content-contact .sosmed .whatsapp:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 16px 4px rgb(73, 241, 87);
+}
+
+/* footer */
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  display: flex; /* Flexbox untuk sejajar secara horizontal */
+  justify-content: center; /* Menempatkan ikon di tengah */
+  align-items: center; /* Menjaga ikon tetap sejajar secara vertikal */
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #000;
+  margin: 1rem;
+  font-size: 24px; /* Menyelaraskan ukuran semua ikon */
+  display: flex; /* Flexbox untuk ikon agar mudah diatur */
+  justify-content: center;
+  align-items: center;
+}
+
+footer .socials a i {
+  width: 24px; /* Membuat ikon memiliki lebar dan tinggi seragam */
+  height: 24px; /* Agar ikon Feather dan Font Awesome seimbang */
+  display: inline-block; /* Menjaga format ikon */
+}
+
+footer .whatsapp-icon {
+  font-size: 24px; /* Ukuran yang sama dengan ikon lainnya */
+}
+
+footer .socials a:hover {
+  color: var(--primary); /* Efek hover tetap konsisten */
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #000;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+}
+
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+/* Media queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--secondary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: #265e1b;
+  }
+
+  .content-contact .sosmed {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+}
+
+/* Hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
