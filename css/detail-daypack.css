@@ -79,53 +79,87 @@ body {
   display: none;
 }
 
-/* Hero */
-.hero {
+/* card */
+.card-container {
   min-height: 100vh;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   display: flex;
-  margin-top: 4rem;
+  flex-direction: column;
+  margin-top: 12rem;
+  margin-bottom: 4rem;
 }
 
-.hero .content-contact {
-  padding: 1.4rem 7%;
-  color: var(--bg);
-}
-
-.hero .content-contact h1 {
-  font-size: 3em;
+.card-content h1 {
+  font-size: 2em;
   margin-bottom: 1rem;
 }
 
-.content-contact .sosmed {
-  display: flex;
-  margin-top: 4rem;
+.card-content {
+  padding: 1.4rem 7%;
+  color: var(--bg);
+  text-align: left;
 }
 
-.content-contact .sosmed .instagram {
-  margin: 2rem;
-  border-radius: 55px;
-  height: 199.5px;
+.card-content span {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.card-content p,
+ul {
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.card-content ul ul {
+  line-height: 2;
+  font-weight: 200;
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
+.card-content ul li a img {
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.card-content ul li a {
+  font-weight: 600;
+  color: var(--bg);
+}
+
+.card-content ul li a:hover {
+  color: #363636;
+}
+
+.card-content .carrier {
+  margin: 2rem 0 2rem 0;
+  border-radius: 10px;
+}
+
+.cta-back {
+  width: auto; /* Pastikan tombol tidak memenuhi layar */
+  display: inline-block; /* Agar tombol selebar konten */
+  background-color: var(--primary);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  align-self: center;
   transition: 0.5s ease-in-out;
 }
 
-.content-contact .sosmed .instagram:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 0px 16px 4px rgba(255, 24, 24, 1);
-}
-
-.content-contact .sosmed .whatsapp {
-  margin: 2rem;
-  border-radius: 32px;
-  height: 201px;
-  transition: 0.5s ease-in-out;
-}
-
-.content-contact .sosmed .whatsapp:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 0px 16px 4px rgb(73, 241, 87);
+.cta-back:hover {
+  color: var(--secondary);
+  background-color: var(--bg);
 }
 
 /* footer */
@@ -133,7 +167,7 @@ footer {
   background-color: var(--bg);
   text-align: center;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 footer .socials {
@@ -231,12 +265,52 @@ footer .credit {
     color: #265e1b;
   }
 
-  .content-contact .sosmed {
+  .card-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15rem;
   }
 
+  .card-content h1 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    padding: 1.4rem 7%;
+    color: var(--bg);
+    text-align: center;
+  }
+
+  .card-content span {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .card-content p,
+  ul {
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 1.2rem;
+    list-style-type: none;
+  }
+
+  .card-content ul ul {
+    line-height: 2;
+    font-weight: 200;
+    list-style-type: none;
+  }
+
+  .card-content .carrier {
+    width: 325px;
+    height: auto;
+    margin: 2rem 0 2rem 0;
+    border-radius: 10px;
+  }
 }
 
 /* Hp */
