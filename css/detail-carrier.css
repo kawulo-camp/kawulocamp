@@ -136,7 +136,7 @@ ul {
   color: #363636;
 }
 
-.card-content .daypack {
+.card-content .carrier {
   margin: 2rem 0 2rem 0;
   border-radius: 10px;
 }
@@ -305,7 +305,7 @@ footer .credit {
     list-style-type: none;
   }
 
-  .card-content .daypack {
+  .card-content .carrier {
     width: 325px;
     height: auto;
     margin: 2rem 0 2rem 0;
