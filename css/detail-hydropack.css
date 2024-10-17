@@ -1,0 +1,321 @@
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+:root {
+  --primary: #277019;
+  --secondary: #101010;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  animation: 0.5s transitionIn;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary);
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar img {
+  margin-bottom: 0.5rem;
+  width: 250px;
+  object-fit: cover;
+}
+
+.navbar .navbar-nav a {
+  color: #ffff;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-extra a {
+  color: #ffff;
+  margin: 0 0.5rem;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* card */
+.card-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12rem;
+  margin-bottom: 4rem;
+}
+
+.card-content h1 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  padding: 1.4rem 7%;
+  color: var(--bg);
+  text-align: left;
+}
+
+.card-content span {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.card-content p,
+ul {
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.card-content ul ul {
+  line-height: 2;
+  font-weight: 200;
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
+.card-content ul li a img {
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.card-content ul li a {
+  font-weight: 600;
+  color: var(--bg);
+}
+
+.card-content ul li a:hover {
+  color: #363636;
+}
+
+.card-content .hydropack {
+  margin: 2rem 0 2rem 0;
+  border-radius: 10px;
+}
+
+.cta-back {
+  width: auto; /* Pastikan tombol tidak memenuhi layar */
+  display: inline-block; /* Agar tombol selebar konten */
+  background-color: var(--primary);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  align-self: center;
+  transition: 0.5s ease-in-out;
+}
+
+.cta-back:hover {
+  color: var(--secondary);
+  background-color: var(--bg);
+}
+
+/* footer */
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+footer .socials {
+  display: flex; /* Flexbox untuk sejajar secara horizontal */
+  justify-content: center; /* Menempatkan ikon di tengah */
+  align-items: center; /* Menjaga ikon tetap sejajar secara vertikal */
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #000;
+  margin: 1rem;
+  font-size: 24px; /* Menyelaraskan ukuran semua ikon */
+  display: flex; /* Flexbox untuk ikon agar mudah diatur */
+  justify-content: center;
+  align-items: center;
+}
+
+footer .socials a i {
+  width: 24px; /* Membuat ikon memiliki lebar dan tinggi seragam */
+  height: 24px; /* Agar ikon Feather dan Font Awesome seimbang */
+  display: inline-block; /* Menjaga format ikon */
+}
+
+footer .whatsapp-icon {
+  font-size: 24px; /* Ukuran yang sama dengan ikon lainnya */
+}
+
+footer .socials a:hover {
+  color: var(--primary); /* Efek hover tetap konsisten */
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #000;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+}
+
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+/* Media queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--secondary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: #265e1b;
+  }
+
+  .card-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15rem;
+  }
+
+  .card-content h1 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    padding: 1.4rem 7%;
+    color: var(--bg);
+    text-align: center;
+  }
+
+  .card-content span {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .card-content p,
+  ul {
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 1.2rem;
+    list-style-type: none;
+  }
+
+  .card-content ul ul {
+    line-height: 2;
+    font-weight: 200;
+    list-style-type: none;
+  }
+
+  .card-content .hydropack {
+    width: 325px;
+    height: auto;
+    margin: 2rem 0 2rem 0;
+    border-radius: 10px;
+  }
+}
+
+/* Hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
