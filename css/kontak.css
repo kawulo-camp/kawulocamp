@@ -259,6 +259,10 @@ footer .credit {
     margin-top: 4rem;
   }
 
+  .cursor {
+        display: none; /* Menyembunyikan kursor */
+    }
+
 }
 
 /* Hp */
@@ -266,4 +270,8 @@ footer .credit {
   html {
     font-size: 55%;
   }
+
+  .cursor {
+        display: none; /* Menyembunyikan kursor */
+    }
 }

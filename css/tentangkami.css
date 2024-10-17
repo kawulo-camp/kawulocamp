@@ -274,6 +274,10 @@ footer .credit {
   .navbar .navbar-nav a:hover {
     color: #265e1b;
   }
+
+  .cursor {
+        display: none; /* Menyembunyikan kursor */
+    }
 }
 
 /* Hp */
@@ -281,4 +285,8 @@ footer .credit {
   html {
     font-size: 55%;
   }
+
+  .cursor {
+        display: none; /* Menyembunyikan kursor */
+    }
 }
