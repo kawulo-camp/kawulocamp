@@ -33,6 +33,28 @@ body {
   background-color: var(--secondary);
 }
 
+/* Custom cursor */
+.cursor {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+    pointer-events: none; /* Agar tidak mempengaruhi interaksi */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Efek hover pada elemen tertentu */
+a:hover ~ .cursor,
+.cta:hover ~ .cursor {
+    width: 80px;
+    height: 80px;
+    background-color: #ffcc00; /* Warna saat hover */
+}
+
 /* navbar */
 .navbar {
   display: flex;
